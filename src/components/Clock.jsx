@@ -34,22 +34,19 @@ class Clock extends React.Component {
 
     // }
     myfunc=(seconds)=>{
-        const temp = this.formatTime(seconds)
-        console.log(temp)
+        // const temp = this.formatTime(seconds)
+        // console.log(temp)
+        console.log(seconds)
         var temp2 = seconds
-            // var time2=timeInSeconds;
-            // this.interval(time2);
-            var time=setInterval(()=>{
+                var time  = setInterval(()=>{
                 console.log("checking")
                 temp2-=1;
-                // console.log(this.myfunc(time2))
                 this.setState({
                     time1:temp2
                 })
                 
                 if (temp2 ===0){
                     clearInterval(time)
-                    // window.location.reload(false)
                 }
                 },1000);
         
